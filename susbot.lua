@@ -72,7 +72,7 @@ local texts = {
     "😳 WHEN THE IMPOSTOR IS SUS";
     "😳 YOU HAVE BEEN EJECTED FROM THE SKELD";
     "😳 GET TROLLED TROLOLOLOLOL";
-    "😳 AWH, ARE YOU MAD? 🥺 MIC UP. INVITE: 6vZXAAkJQj";
+    "😳 COME SAY HI TO THE DEVS. INVITE: 6vZXAAkJQj";
 }
 
 spawn(function()
@@ -125,7 +125,7 @@ end)
 
 wait(4 * #game.Players:GetPlayers())
 
-game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 AWH, ARE YOU MAD? 🥺 MIC UP. INVITE: 6vZXAAkJQj", "All")
+game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 COME SAY HI TO THE DEVS. INVITE: 6vZXAAkJQj", "All")
 
 syn.queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua"))
 
