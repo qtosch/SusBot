@@ -49,7 +49,7 @@ function newchar()
             radio.Handle.Massless = true
             radio.Parent = game.Players.LocalPlayer.Character
             wait()
-            radio:WaitForChild("Remote"):FireServer("PlaySong", 6187959469)
+            radio:WaitForChild("Remote"):FireServer("PlaySong", 6453121749)
         end
     end)
 
