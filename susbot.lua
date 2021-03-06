@@ -62,7 +62,7 @@ end
 newchar()
 game.Players.LocalPlayer.CharacterAdded:Connect(newchar)
 
-game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 sus impostor bot has arrived", "All")
+game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 SUS IMPOSTOR BOT HAS ARRIVED 😎", "All")
 local texts = {
     "😳 AMOGUS!";
     "😳 RED SUS";
@@ -72,7 +72,9 @@ local texts = {
     "😳 WHEN THE IMPOSTOR IS SUS";
     "😳 YOU HAVE BEEN EJECTED FROM THE SKELD";
     "😳 GET TROLLED TROLOLOLOLOL";
+    "😳 AWH, ARE YOU MAD? 🥺 MIC UP. INVITE: 6vZXAAkJQj";
 }
+
 spawn(function()
     while true do
         game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(texts[math.random(#texts)], "All")
