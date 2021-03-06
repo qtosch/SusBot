@@ -73,6 +73,9 @@ local texts = {
     "😳 YOU HAVE BEEN EJECTED FROM THE SKELD";
     "😳 GET TROLLED TROLOLOLOLOL";
     "😳 COME SAY HI TO THE DEVS. INVITE: 6vZXAAkJQj";
+    "😳 U MAD? MIC UP! INVITE: 6vZXAAkJQj";
+    "😳 MAD YOU CANT PLAY YOUR AWFUL MUSIC? MIC UP. INVITE: 6vZXAAkJQj";
+    "😳 BORED? COME JOIN. INVITE: 6vZXAAkJQj";
 }
 
 spawn(function()
