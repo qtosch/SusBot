@@ -62,7 +62,7 @@ end
 newchar()
 game.Players.LocalPlayer.CharacterAdded:Connect(newchar)
 
-game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 SUS IMPOSTOR BOT HAS ARRIVED 😎", "All")
+game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("SUP NERDS? 😳 SUS IMPOSTOR BOT HAS ARRIVED 😎", "All")
 local texts = {
     "😳 AMOGUS!";
     "😳 RED SUS";
