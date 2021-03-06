@@ -124,9 +124,9 @@ wait(4 * #game.Players:GetPlayers())
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("MAD? MIC UP! INVITE: 6vZXAAkJQj", "All")
 
-syn.queue_on_teleport(readfile("troll.lua"))
+syn.queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua"))
 
-id = 417267366
+id = game.PlaceId
 
 function findservers()
     local all = {}
