@@ -127,7 +127,7 @@ wait(4 * #game.Players:GetPlayers())
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 COME SAY HI TO THE DEVS. INVITE: 6vZXAAkJQj", "All")
 
-syn.queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua"))
+syn.queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua", true))
 
 id = game.PlaceId
 
