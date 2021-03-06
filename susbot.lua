@@ -71,6 +71,7 @@ local texts = {
     "😳 OOPSIE!";
     "😳 WHEN THE IMPOSTOR IS SUS";
     "😳 YOU HAVE BEEN EJECTED FROM THE SKELD";
+    "😳 AWH, ARE YOU MAD? 🥺 MIC UP. INVITE: 6vZXAAkJQj"
 }
 spawn(function()
     while true do
