@@ -123,7 +123,7 @@ spawn(function()
     end
 end)
 
-wait(4 * #game.Players:GetPlayers())
+wait(5 * #game.Players:GetPlayers())
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 COME SAY HI TO THE DEVS. INVITE: 6vZXAAkJQj", "All")
 
