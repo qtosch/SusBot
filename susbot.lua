@@ -84,6 +84,7 @@ local texts = {
     "😳 GOT A SUSSY PROBLEM BRO? HERE'S THERAPY: 6vZXAAkJQj";
     "😳 SORRY, SUS BOT DOESN'T ACCEPT AWFUL MUSIC!";
     "😳 SUSSY!";
+    "😳 NO BAD RAP MUSIC ON THE SKELD!";
 }
 
 spawn(function()
