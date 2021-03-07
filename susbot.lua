@@ -20,7 +20,7 @@ do
     game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
         if msg.Message == "ALL HAIL Reswitching x XZYSWATTEDYOU MIC UP ILL VIOLATE U xzy3510" then return end
         if msg.FromSpeaker == game.Players.LocalPlayer.Name then
-            log("AMONG US BOT ["..game.Players.LocalPlayer.Name.."]", msg.Message)
+            --log("AMONG US BOT ["..game.Players.LocalPlayer.Name.."]", msg.Message)
         else
             log(msg.FromSpeaker, msg.Message)
         end
@@ -87,7 +87,7 @@ local texts = {
     "😳 NO BAD RAP MUSIC ON THE SKELD!";
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
 }
-
+ 
 spawn(function()
     while true do
         game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(texts[math.random(#texts)], "All")
