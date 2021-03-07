@@ -76,6 +76,7 @@ local texts = {
     "😳 MAD YOU CANT PLAY YOUR AWFUL MUSIC? MIC UP. INVITE: 6vZXAAkJQj";
     "😳 BORED? COME JOIN. INVITE: 6vZXAAkJQj";
     "😳 SUP KIDS. COME JOIN. INVITE: 6vZXAAkJQj";
+    "😳 FENNEC SIMPLY CANNOT COMPARE!";
 }
 
 spawn(function()
