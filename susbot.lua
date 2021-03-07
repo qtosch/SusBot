@@ -69,6 +69,7 @@ local texts = {
     "😳 LOOKIN REAL SUSSY";
     "😳 AIRPOD SHOTTY";
     "😳 OOPSIE!";
+    "😳 YOURE ACTING SUS IM VOTING YOU OUT!";
     "😳 WHEN THE IMPOSTOR IS SUS";
     "😳 YOU HAVE BEEN EJECTED FROM THE SKELD";
     "😳 GET TROLLED TROLOLOLOLOL";
