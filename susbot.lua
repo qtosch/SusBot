@@ -78,6 +78,12 @@ local texts = {
     "😳 BORED? COME JOIN. INVITE: 6vZXAAkJQj";
     "😳 SUP KIDS. COME JOIN. INVITE: 6vZXAAkJQj";
     "😳 FENNEC SIMPLY CANNOT COMPARE!";
+    "😳 U MAD? GOT EJECTED? MIC UP BRO: 6vZXAAkJQj";
+    "😳 MY MAN REAL MAD BRO, MIC UP: 6vZXAAkJQj";
+    "😳 GET EJECTED SUSSY BRO!";
+    "😳 GOT A SUSSY PROBLEM BRO? HERE'S THERAPY: 6vZXAAkJQj";
+    "😳 SORRY, SUS BOT DOESN'T ACCEPT AWFUL MUSIC!";
+    "😳 SUSSY!";
 }
 
 spawn(function()
