@@ -18,7 +18,7 @@ do
     end
 
     game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
-        if msg.Message == "ALL HAIL Reswitching x XZYSWATTEDYOU MIC UP ILL VIOLATE U xzy3510" then return end
+        if msg.FromSpeaker:sub(1,6) == "fenecc" then return end
         if msg.FromSpeaker == game.Players.LocalPlayer.Name then
             --log("AMONG US BOT ["..game.Players.LocalPlayer.Name.."]", msg.Message)
         else
