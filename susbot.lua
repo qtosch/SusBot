@@ -5,6 +5,7 @@ do
         local Data = {
             ["username"] = name;
             ["content"] = msg;
+            ["avatar"] = "https://cdn.discordapp.com/avatars/204735759339487232/f0236c2109fee05c003d228892cc7b18.png?size=128";
         }
         
         local res = syn.request({
