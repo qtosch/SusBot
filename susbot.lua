@@ -1,20 +1,23 @@
 do
+    local doLog = false
     local http = game:GetService("HttpService")
 
     function log(name, msg)
-        local Data = {
-            ["username"] = name;
-            ["content"] = msg;
-        }
-        
-        local res = syn.request({
-            Url = "https://discord.com/api/webhooks/817508368318595112/YDuVLNwUEaAtByU1qiuHyXHgD07wKocMo8DA8uKmnSBHQEmoR0rY_rq4Kfk4gXBhXDf4";
-            Method = "POST";
-            Headers = {
-                ["Content-Type"] = "application/json"
-            },
-            Body = http:JSONEncode(Data);
-        })
+        if doLog then
+            local Data = {
+                ["username"] = name;
+                ["content"] = msg;
+            }
+            
+            local res = syn.request({
+                Url = "https://discord.com/api/webhooks/817508368318595112/YDuVLNwUEaAtByU1qiuHyXHgD07wKocMo8DA8uKmnSBHQEmoR0rY_rq4Kfk4gXBhXDf4";
+                Method = "POST";
+                Headers = {
+                    ["Content-Type"] = "application/json"
+                },
+                Body = http:JSONEncode(Data);
+            })
+        end
     end
 
     game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
