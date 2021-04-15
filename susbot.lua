@@ -119,8 +119,11 @@ spawn(function()
                 game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyThrust"):Destroy()
             end
             
-            game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.AngularVelocity = Vector3.new(0,0,0)
+            for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                pcall(function() v.Velocity = Vector3.new(0,0,0) end)
+                pcall(function() v.AngularVelocity = Vector3.new(0,0,0) end)
+            end
+            
             wait(.1)
             local ok = {}
             for i,v in pairs(game.Players:GetPlayers()) do
