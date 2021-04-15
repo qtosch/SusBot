@@ -119,12 +119,12 @@ spawn(function()
                 game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyThrust"):Destroy()
             end
             
-            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyAngularVelocity = Vector3.new(0,0,0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.AngularVelocity = Vector3.new(0,0,0)
             wait(.1)
             local ok = {}
             for i,v in pairs(game.Players:GetPlayers()) do
-                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Sit == false and v.Character.Humanoid.MoveDirection.Magnitude <= 0 and v.Character.HumanoidRootPart.AssemblyLinearVelocity.Magnitude <= .1 then
+                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Sit == false and v.Character.Humanoid.MoveDirection.Magnitude <= 0 and v.Character.HumanoidRootPart.Velocity.Magnitude <= .1 then
                     table.insert(ok, v.Character)
                 end
             end
