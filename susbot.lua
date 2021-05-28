@@ -142,13 +142,17 @@ spawn(function()
                     table.insert(ok, v.Character)
                 end
             end
-            local target = ok[math.random(#ok)]
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(target.HumanoidRootPart.Position)
-            positionTarget = target.HumanoidRootPart
-            local bambam = Instance.new("BodyThrust")
-            bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-            bambam.Force = Vector3.new(1000,0,1000)
-            bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+            if #ok > 0 then
+                local target = ok[math.random(#ok)]
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(target.HumanoidRootPart.Position)
+                positionTarget = target.HumanoidRootPart
+                local bambam = Instance.new("BodyThrust")
+                bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+                bambam.Force = Vector3.new(1000,0,1000)
+                bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+            else
+                positionTarget = Vector3.new(0,100,0)
+            end
         end)
         wait(1)
     end
