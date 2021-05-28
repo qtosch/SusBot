@@ -89,13 +89,14 @@ local texts = {
     "😳 NO BAD RAP MUSIC ON THE SKELD!";
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
     "😳 SUSBOT FAN CLUB: 6vZXAAkJQj";
+    "😳 ARE YOU A WOMAN? LET'S CHECK YOUR RIGHTS. 6vZXAAkJQj";
 }
 
 local ignorePlayers = {}
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
     local plr = game.Players:FindFirstChild(msg.FromSpeaker)
-    
+
     if table.find(ignorePlayers, plr) then
         return
     end
