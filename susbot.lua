@@ -89,7 +89,7 @@ local texts = {
     "😳 NO BAD RAP MUSIC ON THE SKELD!";
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
     "😳 SUSBOT FAN CLUB: 6vZXAAkJQj";
-    "😳 ARE YOU A WOMAN? LET'S CHECK YOUR RIGHTS. 6vZXAAkJQj";
+    "😳 ARE YOU A WOMAN? LET'S CHECK YOUR RIGHTS: 6vZXAAkJQj";
 }
 
 local ignorePlayers = {}
