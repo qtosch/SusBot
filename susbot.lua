@@ -110,7 +110,7 @@ spawn(function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
         if CFtarget ~= nil then
             local rot = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CFtarget.Position) rot
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CFtarget.Position) * rot
         end
     end)
 
