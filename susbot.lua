@@ -90,6 +90,7 @@ local texts = {
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
     "😳 SUSBOT FAN CLUB: 6vZXAAkJQj";
     "😳 ARE YOU A WOMAN? LET'S CHECK YOUR RIGHTS: 6vZXAAkJQj";
+    "😳 Support BLM? 🙊 Join to discuss: 6vZXAAkJQj";
 }
 
 local ignorePlayers = {}
