@@ -139,7 +139,7 @@ spawn(function()
     end
 end)
 
-wait(5 * #game.Players:GetPlayers())
+wait(4 * #game.Players:GetPlayers())
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 U MAD? MIC UP! INVITE: 6vZXAAkJQj", "All")
 
