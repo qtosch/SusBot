@@ -129,7 +129,8 @@ spawn(function()
 
     local positionTarget = nil
     game:GetService("RunService").Heartbeat:Connect(function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
+        local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+        hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
         if positionTarget ~= nil then
             local pos = nil
             if typeof(positionTarget) == "Instance" then
@@ -137,8 +138,8 @@ spawn(function()
             else
                 pos = positionTarget
             end
-            local rot = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos) * rot
+            local rot = hrp.CFrame - hrp.CFrame.Position
+            hrp.CFrame = CFrame.new(pos) * rot
         end
     end)
 
