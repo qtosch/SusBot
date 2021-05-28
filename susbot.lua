@@ -99,11 +99,15 @@ spawn(function()
 end)
 
 spawn(function()
-    game:GetService('RunService').Stepped:connect(function()
+    game:GetService("RunService").Stepped:Connect(function()
         game.Players.LocalPlayer.Character.Head.CanCollide = false
         game.Players.LocalPlayer.Character.Torso.CanCollide = false
         game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
         game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+    end)
+
+    game:GetService("RunService").Heartbeat:Connect(function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
     end)
 
     function antiSit()
