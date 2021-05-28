@@ -90,7 +90,20 @@ local texts = {
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
     "😳 SUSBOT FAN CLUB: 6vZXAAkJQj";
 }
- 
+
+local ignorePlayers = {}
+
+game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
+    for _, v in pairs(texts) do
+        if v == msg.Message then
+            table.insert(ignorePlayers, game.Players:FindFirstChild(msg.FromSpeaker))
+            print(msg.FromSpeaker)
+            break
+        end
+    end
+end)
+
+
 spawn(function()
     while true do
         game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(texts[math.random(#texts)], "All")
@@ -140,7 +153,7 @@ spawn(function()
             wait(.1)
             local ok = {}
             for i,v in pairs(game.Players:GetPlayers()) do
-                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Sit == false and v.Character.Humanoid.MoveDirection.Magnitude <= 0 and v.Character.HumanoidRootPart.AssemblyLinearVelocity.Magnitude <= .1 then
+                if v ~= game.Players.LocalPlayer and v.Character and table.find(ignorePlayers, v) == nil and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Sit == false and v.Character.Humanoid.MoveDirection.Magnitude <= 0 and v.Character.HumanoidRootPart.AssemblyLinearVelocity.Magnitude <= .1 then
                     table.insert(ok, v.Character)
                 end
             end
