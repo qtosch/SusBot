@@ -105,12 +105,18 @@ spawn(function()
         game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
     end)
 
-    local CFtarget = nil
+    local positionTarget = nil
     game:GetService("RunService").Heartbeat:Connect(function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
-        if CFtarget ~= nil then
+        if positionTarget ~= nil then
+            local pos = nil
+            if typeof(positionTarget) == "Instance" then
+                pos = positionTarget.Position
+            else
+                pos = positionTarget
+            end
             local rot = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CFtarget.Position) * rot
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos) * rot
         end
     end)
 
@@ -138,7 +144,7 @@ spawn(function()
             end
             local target = ok[math.random(#ok)]
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(target.HumanoidRootPart.Position)
-            CFtarget = target.HumanoidRootPart
+            positionTarget = target.HumanoidRootPart
             local bambam = Instance.new("BodyThrust")
             bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
             bambam.Force = Vector3.new(1000,0,1000)
