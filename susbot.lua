@@ -105,8 +105,13 @@ spawn(function()
         game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
     end)
 
+    local CFtarget = nil
     game:GetService("RunService").Heartbeat:Connect(function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
+        if CFtarget ~= nil then
+            local rot = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(CFtarget.Position) rot
+        end
     end)
 
     function antiSit()
@@ -133,6 +138,7 @@ spawn(function()
             end
             local target = ok[math.random(#ok)]
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(target.HumanoidRootPart.Position)
+            CFtarget = target.HumanoidRootPart
             local bambam = Instance.new("BodyThrust")
             bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
             bambam.Force = Vector3.new(1000,0,1000)
