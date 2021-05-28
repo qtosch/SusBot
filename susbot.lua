@@ -94,10 +94,15 @@ local texts = {
 local ignorePlayers = {}
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(msg)
+    local plr = game.Players:FindFirstChild(msg.FromSpeaker)
+    
+    if table.find(ignorePlayers, plr) then
+        return
+    end
+
     for _, v in pairs(texts) do
         if v == msg.Message then
-            table.insert(ignorePlayers, game.Players:FindFirstChild(msg.FromSpeaker))
-            print(msg.FromSpeaker)
+            table.insert(ignorePlayers, plr)
             break
         end
     end
