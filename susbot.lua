@@ -143,7 +143,9 @@ wait(5 * #game.Players:GetPlayers())
 
 game.ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("😳 U MAD? MIC UP! INVITE: 6vZXAAkJQj", "All")
 
-syn.queue_on_teleport(syn.request({Url = "https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua?cacheId=" .. game.HttpService:GenerateGUID()}).Body)
+if _G.susbot_queue then
+    syn.queue_on_teleport(syn.request({Url = "https://raw.githubusercontent.com/qtosch/SusBot/main/susbot.lua?cacheId=" .. game.HttpService:GenerateGUID()}).Body)
+end
 
 id = game.PlaceId
 
