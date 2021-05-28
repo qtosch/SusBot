@@ -88,6 +88,7 @@ local texts = {
     "😳 SUSSY!";
     "😳 NO BAD RAP MUSIC ON THE SKELD!";
     "😳 SORRY UR SUS BRO I JUST SAW YOU VENT ON CAMS";
+    "😳 SUSBOT FAN CLUB: 6vZXAAkJQj";
 }
  
 spawn(function()
