@@ -98,10 +98,6 @@ spawn(function()
     end
 end)
 
-game:GetService("RunService").Heartbeat:Connect(function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
-end)
-
 spawn(function()
     game:GetService('RunService').Stepped:connect(function()
         game.Players.LocalPlayer.Character.Head.CanCollide = false
